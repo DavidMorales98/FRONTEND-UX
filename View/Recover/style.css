@@ -260,19 +260,11 @@ form .login-form .button input:hover {
     height: 100%;
     width: 100%;
     border-radius: 25px;
-<<<<<<< HEAD
     background-color: var(--color1);
-=======
-    background-color: #82CD47;
->>>>>>> main
     color: var(--color-text2);
     cursor: pointer;
 }
 
 #close:hover{
-<<<<<<< HEAD
     background-color: var(--color4);
-=======
-    background-color: hsl(94, 57%, 40%);
->>>>>>> main
 }
