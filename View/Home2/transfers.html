@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transferencias</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
 
 </head>
@@ -19,35 +19,35 @@
         </label>
         <img src="image-removebg-preview_2.png" alt="">
         <ul>
-            <li class="list">
+            <li class="list btn-navbar">
                 <a href="../Home/index.html">
-                <i class="fi fi-rr-users"></i>
-                Cambiar cuenta</a>
+                    <i class="fi fi-rr-users"></i>
+                    Cambiar cuenta</a>
             </li>
-            <li class="list">
-                <a href="index.html" >
-                <i class="fi fi-rr-clipboard-list"></i>
-                Historial</a>
+            <li class="list btn-navbar">
+                <a href="index.html">
+                    <i class="fi fi-rr-clipboard-list"></i>
+                    Historial</a>
             </li>
-            <li class="list active">
+            <li class="list active btn-navbar">
                 <a href="transfers.html">
-                <i class="fi fi-rr-usd-circle"></i>
-                Transferencias</a>
+                    <i class="fi fi-rr-usd-circle"></i>
+                    Transferencias</a>
             </li>
-            <li  onclick="modal()">
+            <li onclick="modal()" class="btn-navbar">
                 <a href="#">
-                <i class="fi fi-rr-credit-card"></i>
-                Facturas</a>
+                    <i class="fi fi-rr-credit-card"></i>
+                    Facturas</a>
             </li>
-            <li  onclick="modal()">
+            <li onclick="modal()" class="btn-navbar">
                 <a href="#">
-                <i class="fi fi-rr-file-invoice-dollar"></i>
-                Servicios</a>
+                    <i class="fi fi-rr-file-invoice-dollar"></i>
+                    Servicios</a>
             </li>
-            <li >
+            <li class="btn-navbar">
                 <a href="../Login/index.html">
-                <i class="fi fi-rr-exit"></i>
-                Cerrar sesión</a>
+                    <i class="fi fi-rr-exit"></i>
+                    Cerrar sesión</a>
             </li>
         </ul>
     </nav>
@@ -65,49 +65,54 @@
             <h2>TIPO DE CUENTA - NUMERO DE CUENTA</h2>
             <h2>Saldo disponible: SALDO</h2>
         </div>
-        <div class="container" style="max-width: 650px; min-width: 400px;">
-            <div class="card">
-              <h2 class="card-header text-center">formulario de Registro</h2>
-              <div class="card-body">
-                <form id="myForm" onsubmit="return validar()">
-                  <div class="form-group">
-                    <legend>Datos de la Cuenta</legend>
-                    <label for="user">Usuario:</label>
-                    <input type="text" class="form-control" id="user" placeholder="Usuario">
-                    <label for="email">Correo Electronico:</label>
-                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
-                    <label for="Pass1">Contraseña:</label>
-                    <input type="password" class="form-control" id="pass1" placeholder="Contraseña">
-                    <label for="pass2">Rep. Contraseña:</label>
-                    <input type="password" class="form-control" id="pass2" placeholder="Repetir Contraseña">
-                    <label for="codipos">Código Postal:</label>
-                    <input type="text" class="form-control" id="codipos" placeholder="Codigo Postal">
-                  </div>
-          
-                  <div class="form-group">
-                    <legend>Datos Personales</legend>
-                    <label for="sexo">Sexo:</label>
-                    <input type="radio" id="sexo" name="sexo"> Masculino
-                    <input type="radio" id="sexo" name="sexo"> Femenino <br>
-                    <label for="ciudad">Ciudad:</label>      
-                      <select class="form-control" id="ciudad">
-                        <option value="Lota">Seleccionar</option>
-                        <option value="Lota">Lota</option>
-                        <option value="Coronel">Coronel</option>
-                        <option value="concepción">Concepción</option>
-                      </select>      
-                    <label for="terminos">Legalidades:</label><br>
-                    <input type="checkbox" id="terminos"> Acepto los términos y condiciones          
-                  </div>
-                  <input type="submit" class="btn btn-success" id="boton" value="Registrar">
-                  <input type="reset" class="btn btn-danger" id="boton" value="Reiniciar">
+        <div class="section-form">
+            <div id="formulario">
+                <form id="form" method="post" action="pagina-destino.php">
+                    <h1>Formulario de transferencia</h1>
+                    <div class="sub">
+                        <h2>Contacto existente</h2>
+                    </div>
+                    <select class="select-transf">
+                        <option class="option-transf" selected disabled>Seleccione el contacto</option>
+                        <option class="option-transf">Pancho Saavedra</option>
+                        <option class="option-transf">Kike Acuña</option>
+                    </select>
+                    <hr>
+                    <div class="sub">
+                        <h2>Nuevo contacto</h2>
+                    </div>
+                    <label>Nombre y apellido</label>
+                    <input type="text" id="name" name="nombre" required="" placeholder="Indique el nombre y apellido" />
+                    <label>RUT</label>
+                    <input type="number" id="name" name="nombre" required=""
+                        placeholder="Indique RUT sin puntos ni digito verificador" />
+                    <h4>Sin puntos ni guión, ej: 11111111-1</h4>
+                    <label>Correo</label>
+                    <input type="email" id="name" name="nombre" required="" placeholder="Indique correo electrónico" />
+                    <label>Banco</label>
+                    <input type="text" id="name" name="nombre" required="" placeholder="Indique el banco" />
+                    <label>Tipo de cuenta</label>
+                    <select class="select-nc">
+                        <option class="option-nc" selected disabled>Indique el tipo de cuenta</option>
+                        <option class="option-nc">Cuenta de ahorro</option>
+                        <option class="option-nc">Cuenta corriente</option>
+                        <option class="option-nc">Cuenta vista</option>
+                    </select>
+                    <label>Numero de cuenta</label>
+                    <input type="number" id="name" name="nombre" required=""
+                        placeholder="Indique el numero de cuenta" />
+                    <label>Monto</label>
+                    <input type="number" id="name" name="nombre" required=""
+                        placeholder="Indique el monto de transferencia" />
+                    <div class="btn-transf">
+                        <button class="btn-form-cancel cancel" type="submit" name="enviar">Cancelar</button>
+                        <button class="btn-form-transf transf" type="submit" name="enviar">Transferir</button>
+                    </div>
                 </form>
-              </div>
             </div>
-          </div>
     </section>
 </body>
 <!-- Archivo personalizado de JS -->
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 </html>

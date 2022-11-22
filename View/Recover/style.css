@@ -266,5 +266,5 @@ form .login-form .button input:hover {
 }
 
 #close:hover{
-    background-color: var(--color4);
+    background-color: var(--color-text1);
 }

@@ -19,3 +19,5 @@ function modal() {
 		modal.style.visibility = "visible";
     }
 }
+//FORMULARIO MULTISTEP
+
